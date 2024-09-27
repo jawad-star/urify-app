@@ -23,9 +23,7 @@ export default function Home() {
     };
   }, []);
 
-  const circleStyle = {
-    transform: `translate(${mousePosition.x / 50}px, ${mousePosition.y / 50}px)`,
-  };
+
 
   return (
     <div className="max-w-screen-xl mx-auto p-4 relative">
