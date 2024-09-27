@@ -75,30 +75,39 @@ export default function Home() {
 
               {/* Badge Section */}
               <motion.div
-      initial={{ width: 0, opacity: 0 }} // Start with width 0 for ribbon opening effect
-      animate={{ width: 500, opacity: 1 }} // Animate to full width
-      transition={{ duration: 1.5 }} // Control the speed of the ribbon opening
-      className="relative mt-8 flex items-center justify-center text-white overflow-hidden"
-      style={{ height: '400px' }} // Set ribbon height
-    >
-      {/* Ribbon Image or Background */}
-      <Image src="/images/ribbon.png" alt="Badge" width={500} height={250} />
+  initial={{ width: 0, opacity: 0 }} // Start with width 0 for ribbon opening effect
+  animate={{ width: 500, opacity: 1 }} // Animate to full width
+  transition={{ duration: 1.5 }} // Control the speed of the ribbon opening
+  className="relative mt-8 flex items-center justify-center text-white overflow-hidden"
+  style={{ height: '400px' }} // Set ribbon height
+>
+  {/* Ribbon Image with Scale Animation */}
+  <motion.div
+    initial={{ width: 0, scale: 0 }} // Start with width 0 and scale 0
+    animate={{ width: 500, scale: 1 }} // Animate to full width and scale 1
+    transition={{ duration: 1.5 }} // Control the speed of the image opening
+    className="overflow-hidden flex justify-center items-center" // Center the image
+  >
+    <Image src="/images/ribbon.png" alt="Badge" width={500} height={250} />
+  </motion.div>
 
-      {/* Fading Text on Ribbon */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1.5 }} // Delay to fade in after ribbon opens
-        className="absolute text-lg text-white"
-        style={{
-          left: '50%',
-          top: '50%',
-          transform: 'translate(-50%, -50%)', // Center text
-        }}
-      >
-    
-      </motion.div>
-    </motion.div>
+  {/* Fading Text on Ribbon */}
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 1.5, duration: 1.5 }} // Delay to fade in after ribbon opens
+    className="absolute text-lg text-white"
+    style={{
+      left: '50%',
+      top: '50%',
+      transform: 'translate(-50%, -50%)', // Center text
+    }}
+  >
+    {/* Your text content can go here */}
+  </motion.div>
+</motion.div>
+
+
 
             </div>
 
@@ -232,6 +241,15 @@ export default function Home() {
 
     {/* Merged Mobiles with animation */}
     <div className="relative w-[500px] h-[500px] flex">
+    <motion.div
+                initial={{ x: -300, opacity: 0 }} // Start from outside the left
+                animate={{ x: 0, opacity: 1 }} // Animate to the center
+                transition={{ duration: 1.4, delay: 0.2 }} // Add delay for sequential appearance
+                whileHover={{ scale: 1.05 }}
+                className="absolute z-0 left-[16rem]  rotate-[-15deg] "
+              >
+                <Image src="/images/ring3.png" alt="rin3g" width={400} height={420} />
+              </motion.div>
       {/* Phone 1 */}
       <motion.div
         initial={{ x: -300, opacity: 0 }} // Start from outside the left of the viewport
@@ -266,7 +284,7 @@ export default function Home() {
       </motion.div>
     </div>
   </div>
-          <motion.div
+  <motion.div
                 initial={{ x: -300, opacity: 0 }} // Start from outside the left
                 animate={{ x: 0, opacity: 1 }} // Animate to the center
                 transition={{ duration: 1.4, delay: 0.2 }} // Add delay for sequential appearance
@@ -275,6 +293,7 @@ export default function Home() {
               >
                 <Image src="/images/ring 2.png" alt="ring" width={400} height={420} />
               </motion.div>
+              
 </section>
 
       </main>
