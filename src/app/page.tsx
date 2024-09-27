@@ -266,6 +266,15 @@ export default function Home() {
       </motion.div>
     </div>
   </div>
+          <motion.div
+                initial={{ x: -300, opacity: 0 }} // Start from outside the left
+                animate={{ x: 0, opacity: 1 }} // Animate to the center
+                transition={{ duration: 1.4, delay: 0.2 }} // Add delay for sequential appearance
+                whileHover={{ scale: 1.05 }}
+                className="absolute z-0 left-[-2rem] top-[13rem] rotate-[-15deg] "
+              >
+                <Image src="/images/ring 2.png" alt="ring" width={400} height={420} />
+              </motion.div>
 </section>
 
       </main>
