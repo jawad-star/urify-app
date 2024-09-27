@@ -1,5 +1,5 @@
-"use client";
-import { useEffect, useState } from 'react';
+
+
 import Image from 'next/image';
 import { motion } from 'framer-motion'; // Keep framer motion for animations
 import logo from '/public/images/loggo.png'; // Adjust this path if necessary
