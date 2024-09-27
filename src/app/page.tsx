@@ -5,23 +5,7 @@ import { motion } from 'framer-motion'; // Keep framer motion for animations
 import logo from '/public/images/loggo.png'; // Adjust this path if necessary
 import star from '/public/images/star.png';
 export default function Home() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  // Track mouse movement for the parallax effect
-  useEffect(() => {
-    const handleMouseMove = (event: any) => {
-      setMousePosition({
-        x: event.clientX,
-        y: event.clientY,
-      });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+ 
 
 
 
