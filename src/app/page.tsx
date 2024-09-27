@@ -6,8 +6,6 @@ import star from '/public/images/star.png';
 export default function Home() {
  
 
-
-
   return (
     <div className="max-w-screen-xl mx-auto p-4 relative">
       {/* Glowing Circles */}
@@ -77,13 +75,31 @@ export default function Home() {
 
               {/* Badge Section */}
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5 }}
-                className="mt-8 flex items-center justify-center"
-              >
-                <Image src="/images/ribbon.png" alt="Badge" width={500} height={250} />
-              </motion.div>
+      initial={{ width: 0, opacity: 0 }} // Start with width 0 for ribbon opening effect
+      animate={{ width: 500, opacity: 1 }} // Animate to full width
+      transition={{ duration: 1.5 }} // Control the speed of the ribbon opening
+      className="relative mt-8 flex items-center justify-center text-white overflow-hidden"
+      style={{ height: '400px' }} // Set ribbon height
+    >
+      {/* Ribbon Image or Background */}
+      <Image src="/images/ribbon.png" alt="Badge" width={500} height={250} />
+
+      {/* Fading Text on Ribbon */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 1.5 }} // Delay to fade in after ribbon opens
+        className="absolute text-lg text-white"
+        style={{
+          left: '50%',
+          top: '50%',
+          transform: 'translate(-50%, -50%)', // Center text
+        }}
+      >
+    
+      </motion.div>
+    </motion.div>
+
             </div>
 
             {/* Merged Mobiles with animation */}
@@ -199,34 +215,59 @@ export default function Home() {
         </section>
 
         {/* Footer Section */}
-        <section className="pb-4 bg-black text-white rounded-lg relative">
-          {/* Add rotating stars in the Footer Section */}
-          <Image src={star} alt="Star" className="absolute top-8 left-10 w-6 h-6 star-rotate" />
-          <Image src={star} alt="Star" className="absolute bottom-10 right-60 w-10 h-10 star-rotate" />
+        <section className=" bg-black text-white rounded-lg relative ">
+  {/* Add rotating stars in the Footer Section */}
+  <Image src={star} alt="Star" className="absolute top-8 left-10 w-6 h-6 star-rotate" />
+  <Image src={star} alt="Star" className="absolute bottom-10 right-60 w-10 h-10 star-rotate" />
 
-          <div className="flex items-center justify-between">
-            <div className="text-left px-16">
-              <h2 className="text-3xl font-bold">Ready To Get Started?</h2>
-              <p className="mt-4">Risus Habitant Leo Egestas Mauris Diam Eget Monri Tempus Vulputate.</p>
-              <button className="z-100 bg-white text-black px-6 py-3 mt-8 rounded flex items-center gap-4">Download App
-              <Image src="/images/apple.png" alt="App preview" width={25} height={25} />
-              </button>
-            </div>
-            <div className="mt-8 z-10">
-              <Image src="/images/iPhone 13 Pro.png" alt="App preview" width={400} height={250} />
-            </div>
-             
-          </div>
-          <motion.div
-                initial={{ x: -300, opacity: 0 }} // Start from outside the left
-                animate={{ x: 0, opacity: 1 }} // Animate to the center
-                transition={{ duration: 1.4, delay: 0.2 }} // Add delay for sequential appearance
-                whileHover={{ scale: 1.05 }}
-                className="absolute z-0 left-[-2rem] top-[7rem] rotate-[-15deg]"
-              >
-                <Image src="/images/ring 2.png" alt="ring" width={400} height={420} />
-              </motion.div>
-        </section>
+  <div className="flex items-center justify-between">
+    <div className="text-left px-16">
+      <h2 className="text-3xl font-bold">Ready To Get Started?</h2>
+      <p className="mt-4">Risus Habitant Leo Egestas Mauris Diam Eget Monri Tempus Vulputate.</p>
+      <button className="z-100 bg-white text-black px-6 py-3 mt-8 rounded flex items-center gap-4">
+        Download App
+        <Image src="/images/apple.png" alt="App preview" width={25} height={25} />
+      </button>
+    </div>
+
+    {/* Merged Mobiles with animation */}
+    <div className="relative w-[500px] h-[500px] flex">
+      {/* Phone 1 */}
+      <motion.div
+        initial={{ x: -300, opacity: 0 }} // Start from outside the left of the viewport
+        animate={{ x: 0, opacity: 1 }} // Animate to the center
+        transition={{ duration: 1.2 }} // Animation duration
+        whileHover={{ scale: 1.05 }}
+        className="absolute z-30 left-[6.5rem] top-[119px] rotate-[-20deg]"
+      >
+        <Image src="/images/1.png" alt="iPhone 1" width={230} height={430} />
+      </motion.div>
+
+      {/* Phone 2 */}
+      <motion.div
+        initial={{ x: -300, opacity: 0 }} // Start from outside the left
+        animate={{ x: 0, opacity: 1 }} // Animate to the center
+        transition={{ duration: 1.4, delay: 0.2 }} // Add delay for sequential appearance
+        whileHover={{ scale: 1.05 }}
+        className="absolute z-20 left-[16rem] top-16 rotate-[-5deg]"
+      >
+        <Image src="/images/bihone2.png" alt="iPhone 2" width={230} height={430} />
+      </motion.div>
+
+      {/* Phone 3 */}
+      <motion.div
+        initial={{ x: -300, opacity: 0 }} // Start from outside the left
+        animate={{ x: 0, opacity: 1 }} // Animate to the center
+        transition={{ duration: 1.6, delay: 0.4 }} // Add more delay for sequential appearance
+        whileHover={{ scale: 1.05 }}
+        className="absolute z-10 left-[24rem] top-12 rotate-[15deg]"
+      >
+        <Image src="/images/biphone3.png" alt="iPhone 3" width={230} height={430} />
+      </motion.div>
+    </div>
+  </div>
+</section>
+
       </main>
 
       {/* Footer */}
