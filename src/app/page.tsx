@@ -28,7 +28,7 @@ export default function Home() {
       
       <Image src={star1} alt="Star" className="absolute top-[106rem] right-[20rem] w-16 h-16 star-rotate z-50" />
       {/* Header */}
-      <header className="flex justify-between items-center py-4 z-10 relative">
+      <header className="flex justify-between items-center  py-4 z-10 relative">
         <div className="flex gap-12 items-center">
           <div className="flex items-center space-x-2">
             <Image src={logo} alt="Uifry logo" width={40} height={40} />
@@ -49,7 +49,7 @@ export default function Home() {
         <section className="text-center relative overflow-hidden mt-12">
           <div className="flex flex-col md:flex-row items-start justify-between">
             {/* Title */}
-            <div className="text-left pl-12 pr-8 max-w-lg pt-16">
+            <div className="text-left  max-w-lg pt-16">
               <h1 className="text-5xl font-bold gradient-text">Make The Best Financial Decisions</h1>
               <p className="text-gray-600 mt-4">
                 Cum Et Convallis Risus Placerat Aliquam, Nunc. Scelerisque Aliquet Faucibus Tincidunt Eu Adipiscing Sociis Arcu Lorem Porttitor.
@@ -68,13 +68,13 @@ export default function Home() {
               </div>
 
               {/* Badge Section */}
-
+<div className='absolute  top-[47.5rem] sm:left-2 sm:top-2 py-10 sm:relative  '>
               <motion.div
                 initial={{ width: 0, opacity: 0 }} // Start with width 0 for ribbon opening effect
                 animate={{ width: 500, opacity: 1 }} // Animate to full width
                 transition={{ duration: 3 }} // Control the speed of the ribbon opening
-                className="relative mt-8 flex items-center justify-center text-white overflow-hidden"
-                style={{ height: '400px' }} // Set ribbon height
+                className="relative w-5 mt-8 h-[400px]   flex items-center justify-center text-white overflow-hidden"
+            // Set ribbon height
               >
                       
                 {/* Ribbon Image with Scale Animation */}
@@ -91,7 +91,7 @@ export default function Home() {
       delay: 1 // Delay for scaling after the width animation
     }
   }} // Control the speed of the image opening
-  className="overflow-hidden flex justify-center items-center z-20" // Center the image
+  className="overflow-hidden flex justify-center items-center z-20 ]" // Center the image
 >
   <Image src="/images/Group 35921.png" alt="Badge" width={500} height={250} />
 </motion.div>
@@ -108,7 +108,7 @@ export default function Home() {
                      delay: 1 // Delay for scaling after the width animation
                    }
                  }} 
-                  className="overflow-hidden flex justify-center items-center absolute left-[8rem] top-[60px] z-10" // Center the image
+                  className="overflow-hidden flex justify-center items-center absolute left-[8rem] top-[3.75rem] z-10" // Center the image
                 >
                <Image src="/images/Rectangle 3.png" alt="Badge" width={240} height={250} />
                  
@@ -173,10 +173,10 @@ export default function Home() {
                    transition={{
                      duration: 1, // Total duration of the animation
                      ease: "easeInOut", // Smooth easing for the animation
-                     delay: 4, // Delay before the opening
+                     delay: 4.2, // Delay before the opening
                      // Additional control for scaling
                      scale: {
-                       duration: 4, // Duration for the scaling part
+                       duration: 4.2, // Duration for the scaling part
                        delay: 1 // Delay for scaling after the width animation
                      }
                    }} 
@@ -191,7 +191,7 @@ export default function Home() {
                   transition={{
                     duration: 1, // Total duration of the animation
                     ease: "easeInOut", // Smooth easing for the animation
-                    delay: 4, // Delay before the opening
+                    delay: 4.4, // Delay before the opening
                     // Additional control for scaling
                     scale: {
                       duration: 4, // Duration for the scaling part
@@ -209,7 +209,7 @@ export default function Home() {
                    transition={{
                      duration: 1, // Total duration of the animation
                      ease: "easeInOut", // Smooth easing for the animation
-                     delay: 4, // Delay before the opening
+                     delay: 4.8, // Delay before the opening
                      // Additional control for scaling
                      scale: {
                        duration: 4, // Duration for the scaling part
@@ -224,7 +224,7 @@ export default function Home() {
                 <motion.div
                   initial={{ width: 0, scale: 0 }} // Start with width 0 and scale 0
                   animate={{ width: 500, scale: 1 }} // Animate to full width and scale 1
-                  transition={{ duration: 11 }} // Control the speed of the image opening
+                  transition={{ duration: 5 }} // Control the speed of the image opening
                   className="overflow-hidden flex justify-center items-center absolute left-[-14.4rem] top-[17.1rem]" // Center the image
                 >
                <Image src="/images/a.png" alt="Badge" width={100} height={100} />
@@ -236,10 +236,11 @@ export default function Home() {
                 {/* Fading Text on Ribbon */}
            
               </motion.div>
+              </div>
             </div>
 
             {/* Merged Mobiles with animation */}
-            <div className="relative w-[500px] h-[500px] flex items-center justify-center">
+            <div className="relative w-[500px] h-[500px] flex items-center justify-center mb-[22rem]  sm:mb-0">
               {/* Phone 1 */}
               <motion.div
                 initial={{ x: -300, opacity: 0 }} // Start from outside the left of the viewport
@@ -292,14 +293,14 @@ export default function Home() {
          
           <Image src={star} alt="Star" className="absolute bottom-[4rem] left-[83rem] w-12 h-12 star-rotate" />
           <Image src={star} alt="Star" className="absolute bottom-[40rem] left-[-4rem] w-12 h-12 star-rotate" />
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col-reverse justify-between items-center sm:flex-row">
             <div className="w-1/2 z-10">
             <motion.div
                 initial={{ x: -300, opacity: 0 }} // Start from outside the left
                 animate={{ x: 0, opacity: 1 }} // Animate to the center
                 transition={{ duration: 1.4, delay: 0.2 }} // Add delay for sequential appearance
                 whileHover={{ scale: 1.05 }}
-                className="absolute  left-[-8rem] top-[3rem] rotate-[-15deg] star-rotate"
+                className="absolute  sm:left-[-6.5rem] sm:top-[3rem] rotate-[-15deg] star-rotate left-0 top-[35rem]"
               >
                 <Image src="/images/ring.png" alt="ring" width={500} height={520} />
               </motion.div>
@@ -313,7 +314,7 @@ export default function Home() {
               </motion.div>
                      
             </div>
-            <div className="w-1/2 pb-[7.3rem]">
+            <div className="px-8 w-full sm:w-1/2 pb-[7.3rem]">
               <h2 className="text-2xl text-red-400 ">Features</h2>
               <h3 className="text-4xl font-extrabold gradient-text">Uifry Premium</h3>
               <ul className="mt-8 space-y-10">
