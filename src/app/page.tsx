@@ -309,8 +309,10 @@ export default function Home() {
                 initial={{ x: -300, opacity: 0 }} // Start from outside the left
                 animate={{ x: 0, opacity: 1 }} // Animate to the center
                 transition={{ duration: 1.4, delay: 0.2 }} // Add delay for sequential appearance
-                whileHover={{ scale: 1.05 }}>
-                <Image src="/images/iPhone-13-pro-Front.png" alt="App preview" width={450} height={350} className=" z-100" />
+                whileHover={{ scale: 1.05 }}
+                className=" z-100" >
+                  
+                <Image src="/images/Fiphone.png" alt="App preview" width={450} height={350} />
               </motion.div>
                      
             </div>
