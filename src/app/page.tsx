@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion'; // Keep framer motion for animations
 import logo from '/public/images/loggo.png'; // Adjust this path if necessary
 import star from '/public/images/star.png';
-import star1 from '/public/images/star 9png.png';
+import star1 from '/public/images/Star 9png.png';
 
 export default function Home() {
   return (
