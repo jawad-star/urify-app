@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion'; // Keep framer motion for animations
 import logo from '/public/images/loggo.png'; // Adjust this path if necessary
 import star from '/public/images/star.png';
+import star1 from '/public/images/star 9png.png';
 
 export default function Home() {
   return (
@@ -16,16 +17,16 @@ export default function Home() {
       <div className="glow-circle glow-circle-6 bg-red-500"></div>
 
       {/* Stars - Add more stars with rotating animation */}
-      <Image src={star} alt="Star" className="absolute top-20 right-10 w-12 h-12 star-rotate" />
-      <Image src={star} alt="Star" className="absolute bottom-20 left-20 w-8 h-8 star-rotate" />
-      <Image src={star} alt="Star" className="absolute bottom-32 right-40 w-6 h-6 star-rotate" />
+      <Image src={star} alt="Star" className="absolute top-[8rem] right-[80rem] w-12 h-12 star-rotate" />
+    
       <Image src={star} alt="Star" className="absolute top-40 right-80 w-10 h-10 star-rotate" />
-      <Image src={star} alt="Star" className="absolute top-16 left-40 w-8 h-8 star-rotate" />
-      <Image src={star} alt="Star" className="absolute bottom-44 left-72 w-10 h-10 star-rotate" />
-      <Image src={star} alt="Star" className="absolute bottom-16 right-12 w-6 h-6 star-rotate" />
-      <Image src={star} alt="Star" className="absolute top-60 left-80 w-12 h-12 star-rotate" />
-      <Image src={star} alt="Star" className="absolute top-32 right-60 w-8 h-8 star-rotate" />
 
+    
+      <Image src={star} alt="Star" className="absolute bottom-1 right-[-5.5rem] w-12 h-12 star-rotate" />
+      <Image src={star} alt="Star" className="absolute top-60 left-80 w-12 h-12 star-rotate" />
+      <Image src={star} alt="Star" className="absolute top-[43rem] right-[-2rem] w-12 h-12 star-rotate" />
+      
+      <Image src={star1} alt="Star" className="absolute top-[106rem] right-[20rem] w-16 h-16 star-rotate z-50" />
       {/* Header */}
       <header className="flex justify-between items-center py-4 z-10 relative">
         <div className="flex gap-12 items-center">
@@ -67,37 +68,173 @@ export default function Home() {
               </div>
 
               {/* Badge Section */}
+
               <motion.div
                 initial={{ width: 0, opacity: 0 }} // Start with width 0 for ribbon opening effect
                 animate={{ width: 500, opacity: 1 }} // Animate to full width
-                transition={{ duration: 1.5 }} // Control the speed of the ribbon opening
+                transition={{ duration: 3 }} // Control the speed of the ribbon opening
                 className="relative mt-8 flex items-center justify-center text-white overflow-hidden"
                 style={{ height: '400px' }} // Set ribbon height
               >
+                      
                 {/* Ribbon Image with Scale Animation */}
+                <motion.div
+  initial={{ width: 0, scale: 0 }} // Start with width 0 and scale 0
+  animate={{ width: 500, scale: 1 }} // Animate to full width and scale 1
+  transition={{
+    duration: 1, // Total duration of the animation
+    ease: "easeInOut", // Smooth easing for the animation
+    delay: 0.5, // Delay before the opening
+    // Additional control for scaling
+    scale: {
+      duration: 0.5, // Duration for the scaling part
+      delay: 1 // Delay for scaling after the width animation
+    }
+  }} // Control the speed of the image opening
+  className="overflow-hidden flex justify-center items-center z-20" // Center the image
+>
+  <Image src="/images/Group 35921.png" alt="Badge" width={500} height={250} />
+</motion.div>
+                <motion.div
+                 initial={{ width: 0, scale: 0 }} // Start with width 0 and scale 0
+                 animate={{ width: 500, scale: 1 }} // Animate to full width and scale 1
+                 transition={{
+                   duration: 1, // Total duration of the animation
+                   ease: "easeInOut", // Smooth easing for the animation
+                   delay: 2, // Delay before the opening
+                   // Additional control for scaling
+                   scale: {
+                     duration: 2, // Duration for the scaling part
+                     delay: 1 // Delay for scaling after the width animation
+                   }
+                 }} 
+                  className="overflow-hidden flex justify-center items-center absolute left-[8rem] top-[60px] z-10" // Center the image
+                >
+               <Image src="/images/Rectangle 3.png" alt="Badge" width={240} height={250} />
+                 
+                </motion.div>
                 <motion.div
                   initial={{ width: 0, scale: 0 }} // Start with width 0 and scale 0
                   animate={{ width: 500, scale: 1 }} // Animate to full width and scale 1
-                  transition={{ duration: 1.5 }} // Control the speed of the image opening
-                  className="overflow-hidden flex justify-center items-center" // Center the image
+                  transition={{
+                    duration: 1, // Total duration of the animation
+                    ease: "easeInOut", // Smooth easing for the animation
+                    delay: 2.5, // Delay before the opening
+                    // Additional control for scaling
+                    scale: {
+                      duration: 2.5, // Duration for the scaling part
+                      delay: 1 // Delay for scaling after the width animation
+                    }
+                  }} 
+                  className="overflow-hidden flex justify-center items-center absolute left-[7.6rem] top-[7.6rem] z-20" // Center the image
                 >
-                  <Image src="/images/ribbon.png" alt="Badge" width={500} height={250} />
+               <Image src="/images/make the best financial decisions.png" alt="Badge" width={150} height={180} />
+                 
                 </motion.div>
-
-                {/* Fading Text on Ribbon */}
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.5, duration: 1.5 }} // Delay to fade in after ribbon opens
-                  className="absolute text-lg text-white"
-                  style={{
-                    left: '50%',
-                    top: '50%',
-                    transform: 'translate(-50%, -50%)', // Center text
-                  }}
+                   initial={{ width: 0, scale: 0 }} // Start with width 0 and scale 0
+                   animate={{ width: 500, scale: 1 }} // Animate to full width and scale 1
+                   transition={{
+                     duration: 1, // Total duration of the animation
+                     ease: "easeInOut", // Smooth easing for the animation
+                     delay: 3, // Delay before the opening
+                     // Additional control for scaling
+                     scale: {
+                       duration: 3, // Duration for the scaling part
+                       delay: 1 // Delay for scaling after the width animation
+                     }
+                   }} 
+                  className="overflow-hidden flex justify-center items-center absolute left-[8rem] top-[16.2rem]" // Center the image
                 >
-                  {/* Your text content can go here */}
+               <Image src="/images/Rectangle 4.png" alt="Badge" width={240} height={250} />
+                 
                 </motion.div>
+                <motion.div
+                  initial={{ width: 0, scale: 0 }} // Start with width 0 and scale 0
+                  animate={{ width: 500, scale: 1 }} // Animate to full width and scale 1
+                  transition={{
+                    duration: 1, // Total duration of the animation
+                    ease: "easeInOut", // Smooth easing for the animation
+                    delay: 4, // Delay before the opening
+                    // Additional control for scaling
+                    scale: {
+                      duration: 4, // Duration for the scaling part
+                      delay: 1 // Delay for scaling after the width animation
+                    }
+                  }} 
+                  className="overflow-hidden flex justify-center items-center absolute left-[5.5rem] top-[16.2rem]" // Center the image
+                >
+               <Image src="/images/Rectangle 7.png" alt="Badge" width={2.7} height={5} />
+                 
+                </motion.div>
+                <motion.div
+                   initial={{ width: 0, scale: 0 }} // Start with width 0 and scale 0
+                   animate={{ width: 500, scale: 1 }} // Animate to full width and scale 1
+                   transition={{
+                     duration: 1, // Total duration of the animation
+                     ease: "easeInOut", // Smooth easing for the animation
+                     delay: 4, // Delay before the opening
+                     // Additional control for scaling
+                     scale: {
+                       duration: 4, // Duration for the scaling part
+                       delay: 1 // Delay for scaling after the width animation
+                     }
+                   }} 
+                  className="overflow-hidden flex justify-center items-center absolute left-[7.5rem] top-[17rem]" // Center the image
+                >
+               <Image src="/images/Star 7.png" alt="Badge" width={50} height={50} />
+                 
+                </motion.div>
+                <motion.div
+                  initial={{ width: 0, scale: 0 }} // Start with width 0 and scale 0
+                  animate={{ width: 500, scale: 1 }} // Animate to full width and scale 1
+                  transition={{
+                    duration: 1, // Total duration of the animation
+                    ease: "easeInOut", // Smooth easing for the animation
+                    delay: 4, // Delay before the opening
+                    // Additional control for scaling
+                    scale: {
+                      duration: 4, // Duration for the scaling part
+                      delay: 1 // Delay for scaling after the width animation
+                    }
+                  }} 
+                  className="overflow-hidden flex justify-center items-center absolute left-[9.5rem] top-[16.2rem]" // Center the image
+                >
+               <Image src="/images/Rectangle 7.png" alt="Badge" width={2.7} height={5} />
+                 
+                </motion.div>
+                <motion.div
+                   initial={{ width: 0, scale: 0 }} // Start with width 0 and scale 0
+                   animate={{ width: 500, scale: 1 }} // Animate to full width and scale 1
+                   transition={{
+                     duration: 1, // Total duration of the animation
+                     ease: "easeInOut", // Smooth easing for the animation
+                     delay: 4, // Delay before the opening
+                     // Additional control for scaling
+                     scale: {
+                       duration: 4, // Duration for the scaling part
+                       delay: 1 // Delay for scaling after the width animation
+                     }
+                   }} 
+                  className="overflow-hidden flex justify-center items-center absolute left-[12.7rem] top-[17.5rem]" // Center the image
+                >
+               <Image src="/images/Group 35922.png" alt="Badge" width={75} height={75} />
+                 
+                </motion.div>
+                <motion.div
+                  initial={{ width: 0, scale: 0 }} // Start with width 0 and scale 0
+                  animate={{ width: 500, scale: 1 }} // Animate to full width and scale 1
+                  transition={{ duration: 11 }} // Control the speed of the image opening
+                  className="overflow-hidden flex justify-center items-center absolute left-[-14.4rem] top-[17.1rem]" // Center the image
+                >
+               <Image src="/images/a.png" alt="Badge" width={100} height={100} />
+                 
+                </motion.div>
+      
+             
+     
+                {/* Fading Text on Ribbon */}
+           
               </motion.div>
             </div>
 
@@ -152,31 +289,42 @@ export default function Home() {
         {/* Features Section */}
         <section className="py-16 relative">
           {/* Add rotating stars in the Features Section */}
-          <Image src={star} alt="Star" className="absolute top-8 right-72 w-8 h-8 star-rotate" />
-          <Image src={star} alt="Star" className="absolute bottom-32 left-16 w-6 h-6 star-rotate" />
-
+         
+          <Image src={star} alt="Star" className="absolute bottom-[4rem] left-[83rem] w-12 h-12 star-rotate" />
+          <Image src={star} alt="Star" className="absolute bottom-[40rem] left-[-4rem] w-12 h-12 star-rotate" />
           <div className="flex justify-between items-center">
             <div className="w-1/2 z-10">
+            <motion.div
+                initial={{ x: -300, opacity: 0 }} // Start from outside the left
+                animate={{ x: 0, opacity: 1 }} // Animate to the center
+                transition={{ duration: 1.4, delay: 0.2 }} // Add delay for sequential appearance
+                whileHover={{ scale: 1.05 }}
+                className="absolute  left-[-8rem] top-[3rem] rotate-[-15deg] star-rotate"
+              >
+                <Image src="/images/ring.png" alt="ring" width={500} height={520} />
+              </motion.div>
+
               <motion.div
                 initial={{ x: -300, opacity: 0 }} // Start from outside the left
                 animate={{ x: 0, opacity: 1 }} // Animate to the center
                 transition={{ duration: 1.4, delay: 0.2 }} // Add delay for sequential appearance
                 whileHover={{ scale: 1.05 }}>
-                <Image src="/images/Group 35933.png" alt="App preview" width={600} height={600} className="mx-auto" />
+                <Image src="/images/iPhone-13-pro-Front.png" alt="App preview" width={450} height={350} className=" z-100" />
               </motion.div>
+                     
             </div>
-            <div className="w-1/2 pl-16">
+            <div className="w-1/2 pb-[7.3rem]">
               <h2 className="text-2xl text-red-400 ">Features</h2>
               <h3 className="text-4xl font-extrabold gradient-text">Uifry Premium</h3>
-              <ul className="mt-8 space-y-4">
+              <ul className="mt-8 space-y-10">
                 <li className="flex items-start space-x-2">
                   <i className="fas fa-star text-red-500 mt-1"></i>
                   <div>
                     <div className='flex gap-2'> 
                       <Image src="/images/star-05.png" alt="App preview" width={25} height={25} />
-                      <h4 className="font-bold">Budgeting Intervals</h4>
+                      <h4 className="font-bold text-2xl">Budgeting Intervals</h4>
                     </div>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 font-bold">
                       Cum Et Convallis Risus Placerat Aliquam, Nunc. Scelerisque Aliquet Faucibus Tincidunt Eu Adipiscing Sociis Arcu Lorem Porttitor.
                     </p>
                   </div>
@@ -186,9 +334,9 @@ export default function Home() {
                   <div>
                     <div className='flex gap-2'> 
                       <Image src="/images/cube-02.png" alt="App preview" width={25} height={25} />
-                      <h4 className="font-bold">Budgeting Intervals</h4>
+                      <h4 className="font-bold text-2xl">Budgeting Intervals</h4>
                     </div>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 font-bold">
                       Cum Et Convallis Risus Placerat Aliquam, Nunc. Scelerisque Aliquet Faucibus Tincidunt Eu Adipiscing Sociis Arcu Lorem Porttitor.
                     </p>
                   </div>
@@ -198,9 +346,9 @@ export default function Home() {
                   <div>
                     <div className='flex gap-2'> 
                       <Image src="/images/cube-04.png" alt="App preview" width={25} height={25} />
-                      <h4 className="font-bold">Budgeting Intervals</h4>
+                      <h4 className="font-bold text-2xl">Budgeting Intervals</h4>
                     </div>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 font-bold">
                       Cum Et Convallis Risus Placerat Aliquam, Nunc. Scelerisque Aliquet Faucibus Tincidunt Eu Adipiscing Sociis Arcu Lorem Porttitor.
                     </p>
                   </div>
@@ -213,9 +361,9 @@ export default function Home() {
         {/* Footer Section */}
         <section className="bg-black text-white rounded-lg relative">
           {/* Add rotating stars in the Footer Section */}
-          <Image src={star} alt="Star" className="absolute top-8 left-10 w-6 h-6 star-rotate" />
-          <Image src={star} alt="Star" className="absolute bottom-10 right-60 w-10 h-10 star-rotate" />
 
+        
+          <Image src={star1} alt="Star" className="absolute top-[23rem] right-[36rem] w-12 h-12 star-rotate z-50" />
           <div className="flex items-center justify-between">
             <div className="text-left px-16">
               <h2 className="text-3xl font-bold">Ready To Get Started?</h2>
@@ -233,7 +381,7 @@ export default function Home() {
                 animate={{ x: 0, opacity: 1 }} // Animate to the center
                 transition={{ duration: 1.4, delay: 0.2 }} // Add delay for sequential appearance
                 whileHover={{ scale: 1.05 }}
-                className="absolute z-0 left-[16rem]  rotate-[-15deg] "
+                className="absolute z-0 left-[11rem]  rotate-[-15deg] "
               >
                 <Image src="/images/ring3.png" alt="rin3g" width={400} height={420} />
               </motion.div>
